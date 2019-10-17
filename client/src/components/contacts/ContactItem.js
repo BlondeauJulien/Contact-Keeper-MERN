@@ -1,5 +1,5 @@
 import React from 'react';
-import Proptypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const ContactItem = ({ contact }) => {
 	const { id, name, email, phone, type } = contact;
@@ -12,7 +12,7 @@ const ContactItem = ({ contact }) => {
                 {type.charAt(0).toUpperCase() + type.slice(1)}
                 </span>
 			</h3>
-            <ul class="list">
+            <ul className="list">
                 {email && (<li>
                     <i className="fas fa-envelope-open"></i> {email}
                 </li>)}
@@ -29,7 +29,7 @@ const ContactItem = ({ contact }) => {
 	);
 };
 
-ContactItem.protoTypes = {
+ContactItem.propTypes = {
     contact: PropTypes.object.isRequired,
 }
 

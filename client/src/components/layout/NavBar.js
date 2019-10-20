@@ -1,5 +1,6 @@
 import React, { Fragment, useContext } from 'react';
 import PropTypes from 'prop-types';
+import About from '../pages/About'
 import { Link } from 'react-router-dom';
 import AuthContext from '../../context/auth/authContext';
 import ConctactContext from '../../context/contact/contactContext';
@@ -24,6 +25,9 @@ const NavBar = ({ title, icon }) => {
 					<i className="fas fa-sign-out-alt" /> <span className="hide-sm">Logout</span>
 				</a>
 			</li>
+			<li>
+				<Link to="/about">About</Link>
+			</li>
 		</Fragment>
 	);
 
@@ -34,6 +38,9 @@ const NavBar = ({ title, icon }) => {
 			</li>
 			<li>
 				<Link to="/login">Login</Link>
+			</li>
+			<li>
+				<Link to="/about">About</Link>
 			</li>
 		</Fragment>
 	);
